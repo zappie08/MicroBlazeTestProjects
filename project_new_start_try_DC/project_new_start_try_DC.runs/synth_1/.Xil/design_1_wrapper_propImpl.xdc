@@ -1,0 +1,15 @@
+set_property SRC_FILE_INFO {cfile:E:/UOA/Y4S1/P4P/Project/project_new_start_try_DC/project_new_start_try_DC.srcs/constrs_1/new/Arty-A7-100-Master.xdc rfile:../../../project_new_start_try_DC.srcs/constrs_1/new/Arty-A7-100-Master.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { sys_clk_i }]; #IO_L12P_T1_MRCC_35 Sch=gclk[100]
+set_property src_info {type:XDC file:1 line:39 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D9    IOSTANDARD LVCMOS33 } [get_ports { btn_tri_io[0] }]; #IO_L6N_T0_VREF_16 Sch=btn_tri_io[0]
+set_property src_info {type:XDC file:1 line:40 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN C9    IOSTANDARD LVCMOS33 } [get_ports { btn_tri_io[1] }]; #IO_L11P_T1_SRCC_16 Sch=btn_tri_io[1]
+set_property src_info {type:XDC file:1 line:41 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN B9    IOSTANDARD LVCMOS33 } [get_ports { btn_tri_io[2] }]; #IO_L11N_T1_SRCC_16 Sch=btn_tri_io[2]
+set_property src_info {type:XDC file:1 line:42 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN B8    IOSTANDARD LVCMOS33 } [get_ports { btn_tri_io[3] }]; #IO_L12P_T1_MRCC_16 Sch=btn_tri_io[3]
+set_property src_info {type:XDC file:1 line:85 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D10   IOSTANDARD LVCMOS33 } [get_ports { usb_uart_rxd }]; #IO_L19N_T3_VREF_16 Sch=uart_rxd_out
+set_property src_info {type:XDC file:1 line:86 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN A9    IOSTANDARD LVCMOS33 } [get_ports { usb_uart_txd }]; #IO_L14N_T2_SRCC_16 Sch=uart_txd_in

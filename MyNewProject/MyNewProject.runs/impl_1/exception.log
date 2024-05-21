@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\UNI\Y4S1\P4P\p4p-2024-group57\Implementation_Test\VivadoProjects\MyNewProject\MyNewProject.runs\impl_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission denied
