@@ -7,7 +7,8 @@
       "name": "PmodIPs",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2"
+      "tool_version": "2023.2",
+      "validated": "true"
     },
     "design_tree": {
       "microblaze_0": "",
@@ -253,12 +254,38 @@
     "ports": {
       "sys_clk_i": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "PmodIPs_sys_clk_i",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       },
       "reset": {
         "type": "rst",
         "direction": "I",
         "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
           "POLARITY": {
             "value": "ACTIVE_LOW"
           }
@@ -340,6 +367,11 @@
               "minimum": "0x00000000",
               "maximum": "0xFFFFFFFF",
               "width": "32"
+            },
+            "parameters": {
+              "master_id": {
+                "value": "1"
+              }
             }
           },
           "M_AXI_IC": {
@@ -350,6 +382,11 @@
               "minimum": "0x00000000",
               "maximum": "0xFFFFFFFF",
               "width": "32"
+            },
+            "parameters": {
+              "master_id": {
+                "value": "2"
+              }
             }
           }
         },
@@ -1416,6 +1453,14 @@
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "32"
+              }
+            },
             "bridges": [
               "M00_AXI"
             ]
@@ -1424,6 +1469,14 @@
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "2"
+              }
+            },
             "bridges": [
               "M00_AXI"
             ]
@@ -1431,7 +1484,33 @@
           "M00_AXI": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "MAX_BURST_LENGTH": {
+                "value": "1"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "32"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
           }
         }
       },
@@ -1449,12 +1528,6 @@
         "xci_path": "ip\\PmodIPs_axi_gpio_0_3\\PmodIPs_axi_gpio_0_3.xci",
         "inst_hier_path": "AXI_GPIO_LED",
         "parameters": {
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "4"
-          },
           "C_IS_DUAL": {
             "value": "0"
           },
@@ -1462,7 +1535,7 @@
             "value": "Custom"
           },
           "GPIO_BOARD_INTERFACE": {
-            "value": "Custom"
+            "value": "led_4bits"
           },
           "USE_BOARD_FLOW": {
             "value": "true"
@@ -1476,17 +1549,11 @@
         "xci_path": "ip\\PmodIPs_axi_gpio_0_6\\PmodIPs_axi_gpio_0_6.xci",
         "inst_hier_path": "AXI_GPIO_RGB_LED",
         "parameters": {
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "12"
-          },
           "C_IS_DUAL": {
             "value": "0"
           },
           "GPIO_BOARD_INTERFACE": {
-            "value": "Custom"
+            "value": "rgb_led"
           },
           "USE_BOARD_FLOW": {
             "value": "true"
@@ -1500,11 +1567,8 @@
         "xci_path": "ip\\PmodIPs_axi_uartlite_0_0\\PmodIPs_axi_uartlite_0_0.xci",
         "inst_hier_path": "AXI_UARTLITE",
         "parameters": {
-          "C_S_AXI_ACLK_FREQ_HZ": {
-            "value": "100015812"
-          },
           "UARTLITE_BOARD_INTERFACE": {
-            "value": "Custom"
+            "value": "usb_uart"
           },
           "USE_BOARD_FLOW": {
             "value": "true"
@@ -1519,10 +1583,10 @@
         "inst_hier_path": "mig_7series_0",
         "parameters": {
           "BOARD_MIG_PARAM": {
-            "value": "Custom"
+            "value": "ddr3_sdram"
           },
           "RESET_BOARD_INTERFACE": {
-            "value": "Custom"
+            "value": "reset"
           }
         }
       },
@@ -1572,6 +1636,20 @@
           "USE_DYN_RECONFIG": {
             "value": "false"
           }
+        },
+        "addressing": {
+          "memory_maps": {
+            "s_axi_lite": {
+              "address_blocks": {
+                "Reg": {
+                  "base_address": "0",
+                  "range": "64K",
+                  "width": "16",
+                  "usage": "register"
+                }
+              }
+            }
+          }
         }
       },
       "axi_gpio_button": {
@@ -1583,9 +1661,6 @@
         "parameters": {
           "C_ALL_INPUTS": {
             "value": "0"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "4"
           },
           "GPIO_BOARD_INTERFACE": {
             "value": "Custom"
@@ -1608,7 +1683,21 @@
         },
         "ports": {
           "sys_clk_in": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100015812",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "sys_clk_out": {
             "direction": "O"
@@ -1633,6 +1722,12 @@
         "interface_ports": [
           "btn",
           "axi_gpio_button/GPIO"
+        ]
+      },
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_smc/M00_AXI",
+          "mig_7series_0/S_AXI"
         ]
       },
       "axi_uartlite_0_UART": {
@@ -1712,6 +1807,12 @@
           "microblaze_0_axi_intc/interrupt",
           "microblaze_0/INTERRUPT"
         ]
+      },
+      "mig_7series_0_DDR3": {
+        "interface_ports": [
+          "ddr3_sdram",
+          "mig_7series_0/DDR3"
+        ]
       }
     },
     "nets": {
@@ -1725,20 +1826,26 @@
           "microblaze_0_axi_periph/M00_ARESETN",
           "microblaze_0_axi_periph/ARESETN",
           "microblaze_0_axi_periph/S00_ARESETN",
+          "AXI_GPIO_RGB_LED/s_axi_aresetn",
+          "AXI_GPIO_LED/s_axi_aresetn",
+          "AXI_UARTLITE/s_axi_aresetn",
           "microblaze_0_axi_intc/s_axi_aresetn",
           "microblaze_0_axi_periph/M05_ARESETN",
-          "microblaze_0_axi_periph/M06_ARESETN",
-          "AXI_GPIO_LED/s_axi_aresetn",
-          "AXI_GPIO_RGB_LED/s_axi_aresetn",
           "axi_gpio_button/s_axi_aresetn",
-          "AXI_UARTLITE/s_axi_aresetn"
+          "microblaze_0_axi_periph/M06_ARESETN"
         ]
       },
       "clk_wiz_0_clk_out1": {
         "ports": [
           "ClockDivider_0/sys_clk_out",
+          "rst_clk_wiz_0_100M/slowest_sync_clk",
           "microblaze_0_axi_intc/processor_clk",
           "microblaze_0_axi_intc/s_axi_aclk",
+          "axi_smc/aclk",
+          "AXI_GPIO_RGB_LED/s_axi_aclk",
+          "AXI_UARTLITE/s_axi_aclk",
+          "axi_gpio_button/s_axi_aclk",
+          "AXI_GPIO_LED/s_axi_aclk",
           "microblaze_0_local_memory/LMB_Clk",
           "microblaze_0_axi_periph/M06_ACLK",
           "microblaze_0_axi_periph/M05_ACLK",
@@ -1749,13 +1856,7 @@
           "microblaze_0_axi_periph/M00_ACLK",
           "microblaze_0_axi_periph/S00_ACLK",
           "microblaze_0_axi_periph/ACLK",
-          "microblaze_0/Clk",
-          "AXI_GPIO_LED/s_axi_aclk",
-          "AXI_GPIO_RGB_LED/s_axi_aclk",
-          "axi_gpio_button/s_axi_aclk",
-          "axi_smc/aclk",
-          "AXI_UARTLITE/s_axi_aclk",
-          "rst_clk_wiz_0_100M/slowest_sync_clk"
+          "microblaze_0/Clk"
         ]
       },
       "clk_wiz_0_clk_out2": {
@@ -1784,21 +1885,30 @@
       },
       "mig_7series_0_mmcm_locked": {
         "ports": [
+          "mig_7series_0/mmcm_locked",
           "rst_mig_7series_0_81M/dcm_locked"
+        ]
+      },
+      "mig_7series_0_ui_addn_clk_0": {
+        "ports": [
+          "mig_7series_0/ui_addn_clk_0",
+          "mig_7series_0/clk_ref_i"
         ]
       },
       "mig_7series_0_ui_clk": {
         "ports": [
-          "axi_smc/aclk1",
+          "mig_7series_0/ui_clk",
           "clk_wiz_0/clk_in1",
+          "axi_smc/aclk1",
           "rst_mig_7series_0_81M/slowest_sync_clk"
         ]
       },
       "mig_7series_0_ui_clk_sync_rst": {
         "ports": [
-          "clk_wiz_0/reset",
+          "mig_7series_0/ui_clk_sync_rst",
+          "rst_mig_7series_0_81M/ext_reset_in",
           "rst_clk_wiz_0_100M/ext_reset_in",
-          "rst_mig_7series_0_81M/ext_reset_in"
+          "clk_wiz_0/reset"
         ]
       },
       "reset_1": {
@@ -1823,12 +1933,14 @@
       "rst_mig_7series_0_81M_peripheral_aresetn": {
         "ports": [
           "rst_mig_7series_0_81M/peripheral_aresetn",
-          "axi_smc/aresetn"
+          "axi_smc/aresetn",
+          "mig_7series_0/aresetn"
         ]
       },
       "sys_clk_i_1": {
         "ports": [
-          "sys_clk_i"
+          "sys_clk_i",
+          "mig_7series_0/sys_clk_i"
         ]
       }
     },
@@ -1867,6 +1979,11 @@
                 "address_block": "/microblaze_0_axi_intc/S_AXI/Reg",
                 "offset": "0x41200000",
                 "range": "64K"
+              },
+              "SEG_mig_7series_0_memaddr": {
+                "address_block": "/mig_7series_0/memmap/memaddr",
+                "offset": "0x80000000",
+                "range": "256M"
               }
             }
           },
@@ -1877,6 +1994,11 @@
                 "offset": "0x00000000",
                 "range": "8K",
                 "offset_high_param": "C_HIGHADDR"
+              },
+              "SEG_mig_7series_0_memaddr": {
+                "address_block": "/mig_7series_0/memmap/memaddr",
+                "offset": "0x80000000",
+                "range": "256M"
               }
             }
           }

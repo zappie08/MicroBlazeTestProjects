@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Tue May 21 15:18:01 2024
-| Host         : DESKTOP-609QEO1 running 64-bit major release  (build 9200)
+| Date         : Mon May 20 21:25:44 2024
+| Host         : Daniels-PC running 64-bit major release  (build 9200)
 | Command      : report_methodology -file PmodIPs_wrapper_methodology_drc_routed.rpt -pb PmodIPs_wrapper_methodology_drc_routed.pb -rpx PmodIPs_wrapper_methodology_drc_routed.rpx
 | Design       : PmodIPs_wrapper
 | Device       : xc7a100tcsg324-1
@@ -5370,14 +5370,14 @@ Related violations: <none>
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option '-to : [get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}]' of constraint 'set_max_delay' uses inefficient query to find pin objects (see constraint position '15' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: c:/UNI/Y4S1/P4P/p4p-2024-group57/Implementation_Test/VivadoProjects/MyNewProject/MyNewProject.gen/sources_1/bd/PmodIPs/ip/PmodIPs_mig_7series_0_0/PmodIPs_mig_7series_0_0/user_design/constraints/PmodIPs_mig_7series_0_0.xdc (Line: 371)
+Current XDC: d:/Users/Daniel/Documents/GitHub/p4p-2024-group57/Implementation Test/VivadoProjects/MyNewProject/MyNewProject.gen/sources_1/bd/PmodIPs/ip/PmodIPs_mig_7series_0_0/PmodIPs_mig_7series_0_0/user_design/constraints/PmodIPs_mig_7series_0_0.xdc (Line: 371)
 Related violations: <none>
 
 XDCC-2#1 Warning
 Scoped Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on sys_clk_i overrides a previous scoped property. It is not recommended to override a scoped (typically an IP) property and could result in unexpected behaviours.
-New Source: C:/UNI/Y4S1/P4P/p4p-2024-group57/Implementation_Test/VivadoProjects/MyNewProject/MyNewProject.srcs/constrs_1/imports/digilent-xdc-master/Arty-A7-100-Master.xdc (Line: 7)
-Previous Source: c:/UNI/Y4S1/P4P/p4p-2024-group57/Implementation_Test/VivadoProjects/MyNewProject/MyNewProject.gen/sources_1/bd/PmodIPs/ip/PmodIPs_mig_7series_0_0/PmodIPs_mig_7series_0_0/user_design/constraints/PmodIPs_mig_7series_0_0.xdc (Line: 275)
+New Source: D:/Users/Daniel/Documents/GitHub/p4p-2024-group57/Implementation Test/VivadoProjects/MyNewProject/MyNewProject.srcs/constrs_1/imports/digilent-xdc-master/Arty-A7-100-Master.xdc (Line: 7)
+Previous Source: d:/Users/Daniel/Documents/GitHub/p4p-2024-group57/Implementation Test/VivadoProjects/MyNewProject/MyNewProject.gen/sources_1/bd/PmodIPs/ip/PmodIPs_mig_7series_0_0/PmodIPs_mig_7series_0_0/user_design/constraints/PmodIPs_mig_7series_0_0.xdc (Line: 275)
 Related violations: <none>
 
 REQP-1959#1 Advisory

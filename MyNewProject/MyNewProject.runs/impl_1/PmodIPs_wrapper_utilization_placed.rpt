@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Tue May 21 15:16:34 2024
-| Host         : DESKTOP-609QEO1 running 64-bit major release  (build 9200)
+| Date         : Mon May 20 21:24:18 2024
+| Host         : Daniels-PC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file PmodIPs_wrapper_utilization_placed.rpt -pb PmodIPs_wrapper_utilization_placed.pb
 | Design       : PmodIPs_wrapper
 | Device       : xc7a100tcsg324-1
@@ -32,8 +32,8 @@ Table of Contents
 +----------------------------+-------+-------+------------+-----------+-------+
 |          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+-------+-------+------------+-----------+-------+
-| Slice LUTs                 | 10810 |     0 |          0 |     63400 | 17.05 |
-|   LUT as Logic             |  9118 |     0 |          0 |     63400 | 14.38 |
+| Slice LUTs                 | 10811 |     0 |          0 |     63400 | 17.05 |
+|   LUT as Logic             |  9119 |     0 |          0 |     63400 | 14.38 |
 |   LUT as Memory            |  1692 |     0 |          0 |     19000 |  8.91 |
 |     LUT as Distributed RAM |  1268 |     0 |            |           |       |
 |     LUT as Shift Register  |   424 |     0 |            |           |       |
@@ -72,13 +72,13 @@ Table of Contents
 +--------------------------------------------+-------+-------+------------+-----------+-------+
 |                  Site Type                 |  Used | Fixed | Prohibited | Available | Util% |
 +--------------------------------------------+-------+-------+------------+-----------+-------+
-| Slice                                      |  4400 |     0 |          0 |     15850 | 27.76 |
-|   SLICEL                                   |  3068 |     0 |            |           |       |
-|   SLICEM                                   |  1332 |     0 |            |           |       |
-| LUT as Logic                               |  9118 |     0 |          0 |     63400 | 14.38 |
+| Slice                                      |  4429 |     0 |          0 |     15850 | 27.94 |
+|   SLICEL                                   |  3085 |     0 |            |           |       |
+|   SLICEM                                   |  1344 |     0 |            |           |       |
+| LUT as Logic                               |  9119 |     0 |          0 |     63400 | 14.38 |
 |   using O5 output only                     |     1 |       |            |           |       |
-|   using O6 output only                     |  6470 |       |            |           |       |
-|   using O5 and O6                          |  2647 |       |            |           |       |
+|   using O6 output only                     |  6472 |       |            |           |       |
+|   using O5 and O6                          |  2646 |       |            |           |       |
 | LUT as Memory                              |  1692 |     0 |          0 |     19000 |  8.91 |
 |   LUT as Distributed RAM                   |  1268 |     0 |            |           |       |
 |     using O5 output only                   |     0 |       |            |           |       |
@@ -89,10 +89,10 @@ Table of Contents
 |     using O6 output only                   |   324 |       |            |           |       |
 |     using O5 and O6                        |    76 |       |            |           |       |
 | Slice Registers                            | 12114 |     0 |          0 |    126800 |  9.55 |
-|   Register driven from within the Slice    |  6581 |       |            |           |       |
-|   Register driven from outside the Slice   |  5533 |       |            |           |       |
-|     LUT in front of the register is unused |  3963 |       |            |           |       |
-|     LUT in front of the register is used   |  1570 |       |            |           |       |
+|   Register driven from within the Slice    |  6569 |       |            |           |       |
+|   Register driven from outside the Slice   |  5545 |       |            |           |       |
+|     LUT in front of the register is unused |  4024 |       |            |           |       |
+|     LUT in front of the register is used   |  1521 |       |            |           |       |
 | Unique Control Sets                        |   548 |       |          0 |     15850 |  3.46 |
 +--------------------------------------------+-------+-------+------------+-----------+-------+
 * * Note: Available Control Sets calculated as Slice * 1, Review the Control Sets Report for more information regarding control sets.
@@ -128,9 +128,9 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   72 |    53 |          0 |       210 | 34.29 |
-|   IOB Master Pads           |   36 |       |            |           |       |
-|   IOB Slave Pads            |   33 |       |            |           |       |
+| Bonded IOB                  |   72 |    72 |          0 |       210 | 34.29 |
+|   IOB Master Pads           |   35 |       |            |           |       |
+|   IOB Slave Pads            |   34 |       |            |           |       |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    1 |     1 |          0 |         6 | 16.67 |
 | PHASER_REF                  |    1 |     1 |          0 |         6 | 16.67 |

@@ -12,9 +12,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=E:/UOA/Y4S1/P4P/Vitis/2023.2/bin;E:/UOA/Y4S1/P4P/Vivado/2023.2/ids_lite/ISE/bin/nt64;E:/UOA/Y4S1/P4P/Vivado/2023.2/ids_lite/ISE/lib/nt64:E:/UOA/Y4S1/P4P/Vivado/2023.2/bin
+  PATH=D:/Xilinx/Vitis/2023.2/bin;D:/Xilinx/Vivado/2023.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2023.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2023.2/bin
 else
-  PATH=E:/UOA/Y4S1/P4P/Vitis/2023.2/bin;E:/UOA/Y4S1/P4P/Vivado/2023.2/ids_lite/ISE/bin/nt64;E:/UOA/Y4S1/P4P/Vivado/2023.2/ids_lite/ISE/lib/nt64:E:/UOA/Y4S1/P4P/Vivado/2023.2/bin:$PATH
+  PATH=D:/Xilinx/Vitis/2023.2/bin;D:/Xilinx/Vivado/2023.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2023.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2023.2/bin:$PATH
 fi
 export PATH
 
@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/UNI/Y4S1/P4P/p4p-2024-group57/Implementation_Test/VivadoProjects/MyNewProject/MyNewProject.runs/impl_1'
+HD_PWD='D:/Users/Daniel/Documents/GitHub/p4p-2024-group57/Implementation Test/VivadoProjects/MyNewProject/MyNewProject.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,7 +42,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log PmodIPs_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source PmodIPs_wrapper.tcl -notrace
 
 

@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Tue May 21 20:30:48 2024
-# Process ID: 22352
-# Current directory: C:/UNI/Y4S1/P4P/p4p-2024-group57/Implementation_Test/VivadoProjects/MyNewProject/MyNewProject.runs/impl_1
+# Start of session at: Mon May 20 21:22:18 2024
+# Process ID: 38548
+# Current directory: D:/Users/Daniel/Documents/GitHub/p4p-2024-group57/Implementation Test/VivadoProjects/MyNewProject/MyNewProject.runs/impl_1
 # Command line: vivado.exe -log PmodIPs_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source PmodIPs_wrapper.tcl -notrace
-# Log file: C:/UNI/Y4S1/P4P/p4p-2024-group57/Implementation_Test/VivadoProjects/MyNewProject/MyNewProject.runs/impl_1/PmodIPs_wrapper.vdi
-# Journal file: C:/UNI/Y4S1/P4P/p4p-2024-group57/Implementation_Test/VivadoProjects/MyNewProject/MyNewProject.runs/impl_1\vivado.jou
-# Running On: DESKTOP-609QEO1, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 12, Host memory: 34264 MB
+# Log file: D:/Users/Daniel/Documents/GitHub/p4p-2024-group57/Implementation Test/VivadoProjects/MyNewProject/MyNewProject.runs/impl_1/PmodIPs_wrapper.vdi
+# Journal file: D:/Users/Daniel/Documents/GitHub/p4p-2024-group57/Implementation Test/VivadoProjects/MyNewProject/MyNewProject.runs/impl_1\vivado.jou
+# Running On: Daniels-PC, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 8, Host memory: 34270 MB
 #-----------------------------------------------------------
 source PmodIPs_wrapper.tcl -notrace

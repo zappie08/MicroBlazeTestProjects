@@ -69,4 +69,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==PmodIPs_axi
 # IP: bd/PmodIPs/ip/PmodIPs_ClockDivider_0_0/PmodIPs_ClockDivider_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==PmodIPs_ClockDivider_0_0 || ORIG_REF_NAME==PmodIPs_ClockDivider_0_0} -quiet] -quiet
 
-# XDC: c:/UNI/Y4S1/P4P/p4p-2024-group57/Implementation_Test/VivadoProjects/MyNewProject/MyNewProject.gen/sources_1/bd/PmodIPs/PmodIPs_ooc.xdc
+# XDC: d:/Users/Daniel/Documents/GitHub/p4p-2024-group57/Implementation Test/VivadoProjects/MyNewProject/MyNewProject.gen/sources_1/bd/PmodIPs/PmodIPs_ooc.xdc
