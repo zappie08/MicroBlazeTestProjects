@@ -1,0 +1,36 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "tcf-debug",
+			"request": "launch",
+			"name": "xclk_wiz_setrate_example_app_hw_1",
+			"debugType": "baremetal-fpga",
+			"attachToRunningTargetOptions": {
+				"targetSetupMode": "standalone",
+				"executeScript": true,
+				"scriptPath": ""
+			},
+			"autoAttachProcessChildren": false,
+			"target": {
+				"targetConnectionId": "Local",
+				"peersIniPath": "../../../.peers.ini",
+				"context": "fpga"
+			},
+			"targetSetup": {
+				"resetSystem": true,
+				"programDevice": true,
+				"bitstreamFile": "${workspaceFolder}\\xclk_wiz_setrate_example\\_ide\\bitstream\\PmodIPs_wrapper_dynclk.bit",
+				"downloadElf": [
+					{
+						"core": "microblaze_0",
+						"resetProcessor": true,
+						"elfFile": "${workspaceFolder}\\xclk_wiz_setrate_example\\build\\xclk_wiz_setrate_example.elf",
+						"stopAtEntry": false
+					}
+				]
+			},
+			"internalConsoleOptions": "openOnSessionStart"
+		}
+	]
+}

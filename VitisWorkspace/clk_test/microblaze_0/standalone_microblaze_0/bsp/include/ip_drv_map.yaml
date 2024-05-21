@@ -1,0 +1,15 @@
+AXI_GPIO_LED:
+- axi_gpio
+- gpio
+AXI_GPIO_RGB_LED:
+- axi_gpio
+- gpio
+AXI_UARTLITE:
+- axi_uartlite
+- uartlite
+axi_gpio_button:
+- axi_gpio
+- gpio
+microblaze_0_axi_intc:
+- axi_intc
+- intc
